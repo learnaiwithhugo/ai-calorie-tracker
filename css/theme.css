@@ -1,0 +1,125 @@
+/* theme.css — design tokens (SPEC-UI.md §1). Light mode ONLY, hard-coded.
+   Never follow prefers-color-scheme — the source app forces .preferredColorScheme(.light). */
+
+:root {
+  color-scheme: light only;
+
+  /* --- colors (§1.1) --- */
+  --sc-background: #F7F6F3;
+  --sc-card-bg: #FFFFFF;
+  --sc-primary-text: #000000;
+  --sc-protein: #E85D5D;
+  --sc-carbs: #E5A054;
+  --sc-fat: #6B8DE3;
+  --sc-water: #4F9DF1;
+  --sc-streak-flame: #FF952D;
+
+  --sc-secondary: #8E8E93;
+  --sc-secondary-14: rgba(142, 142, 147, 0.14);
+  --sc-secondary-15: rgba(142, 142, 147, 0.15);
+  --sc-secondary-18: rgba(142, 142, 147, 0.18);
+  --sc-secondary-35: rgba(142, 142, 147, 0.35);
+  --sc-secondary-40: rgba(142, 142, 147, 0.40);
+
+  --sc-red: #FF3B30;
+  --sc-orange: #FF9500;
+  --sc-green: #34C759;
+  --sc-blue: #007AFF;
+
+  --sc-black-5: rgba(0, 0, 0, 0.05);
+  --sc-black-6: rgba(0, 0, 0, 0.06);
+  --sc-black-8: rgba(0, 0, 0, 0.08);
+  --sc-black-12: rgba(0, 0, 0, 0.12);
+  --sc-black-15: rgba(0, 0, 0, 0.15);
+  --sc-black-30: rgba(0, 0, 0, 0.30);
+  --sc-black-35: rgba(0, 0, 0, 0.35);
+  --sc-black-45: rgba(0, 0, 0, 0.45);
+  --sc-black-85: rgba(0, 0, 0, 0.85);
+  --sc-white-30: rgba(255, 255, 255, 0.30);
+  --sc-white-55: rgba(255, 255, 255, 0.55);
+  --sc-white-60: rgba(255, 255, 255, 0.60);
+  --sc-white-70: rgba(255, 255, 255, 0.70);
+  --sc-white-80: rgba(255, 255, 255, 0.80);
+
+  /* --- card metrics (§1.3) --- */
+  --sc-card-radius: 24px;
+  --sc-card-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  --sc-tile-radius: 16px;
+  --sc-tile-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+
+  /* --- bottom bar geometry (§2.3) --- */
+  --sc-bar-height: 68px;
+  --sc-fab-diameter: 60px;
+  --sc-fab-bump-diameter: 90px;
+  --sc-fab-raise: 24px;
+  --sc-bar-bottom-padding: 4px;
+  --sc-fab-slot-width: 102px;
+  --sc-bar-content-padding: 8px;
+  --sc-bar-footprint: 107px;
+
+  /* --- fonts (§1.2) --- */
+  --sc-font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --sc-font-rounded: -apple-system, BlinkMacSystemFont, "SF Pro Rounded", "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+  --sc-section-title-size: 22px;
+}
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+html, body {
+  background: var(--sc-background);
+  color: var(--sc-primary-text);
+  font-family: var(--sc-font);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overscroll-behavior-y: none;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+button, input, textarea {
+  font-family: var(--sc-font);
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.card {
+  background: var(--sc-card-bg);
+  border-radius: var(--sc-card-radius);
+  box-shadow: var(--sc-card-shadow);
+}
+
+.number-font {
+  font-family: var(--sc-font-rounded);
+  font-weight: 700;
+}
+
+.section-title {
+  font-family: var(--sc-font-rounded);
+  font-weight: 700;
+  font-size: var(--sc-section-title-size);
+  color: var(--sc-primary-text);
+  margin: 0;
+}
+
+.secondary-text { color: var(--sc-secondary); }
+
+.icon svg { display: block; }
+
+/* Numeric text rolling-digit stand-in: SwiftUI .contentTransition(.numericText()) approximated
+   with a quick fade+slight-rise, good enough to read as "the number updated". */
+.numeric-text {
+  transition: opacity 0.18s ease-out;
+}
+.numeric-text.is-changing {
+  opacity: 0.45;
+}

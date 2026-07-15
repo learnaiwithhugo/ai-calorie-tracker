@@ -1,0 +1,7 @@
+# Secrets — never commit. Runtime values live in Vercel env settings.
+.env
+
+node_modules/
+.vercel/
+.DS_Store
+.vercel

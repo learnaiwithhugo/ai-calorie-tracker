@@ -1,0 +1,17 @@
+{
+  "name": "ai-calorie-tracker",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "description": "Free AI calorie tracker PWA — snap a photo, Gemini estimates calories and macros. Vanilla JS, zero runtime dependencies, deploys to Vercel.",
+  "scripts": {
+    "dev": "node dev-server.mjs",
+    "dev:vercel": "vercel dev",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "vercel": "^37.0.0",
+    "@undecaf/barcode-detector-polyfill": "^0.9.23"
+  }
+}
