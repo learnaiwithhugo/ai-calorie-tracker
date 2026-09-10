@@ -4,7 +4,7 @@ Snap a photo of your food → AI tells you the calories and macros. A complete, 
 
 **You don't need to know how to code.** If you have a Claude subscription ([claude.ai](https://claude.ai) or Claude Code), just paste this to Claude:
 
-> Clone https://github.com/hugoman225-bot/ai-calorie-tracker and follow its README to set it up and deploy it for me. Walk me through getting the API keys step by step — I'm not technical.
+> Clone https://github.com/learnaiwithhugo/ai-calorie-tracker and follow its README to set it up and deploy it for me. Walk me through getting the API keys step by step — I'm not technical.
 
 Claude will read this README and handle everything below for you.
 
@@ -37,7 +37,7 @@ You (Claude) are setting this app up for a non-technical user. Follow these step
 - Clone the repo and install dev tooling (the only npm packages are the Vercel CLI and a barcode polyfill — the app itself has zero runtime dependencies):
 
 ```bash
-git clone https://github.com/hugoman225-bot/ai-calorie-tracker.git
+git clone https://github.com/learnaiwithhugo/ai-calorie-tracker.git
 cd ai-calorie-tracker
 npm install
 ```
